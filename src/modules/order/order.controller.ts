@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import createOrder from './order.service';
 import { IOrder } from './order.interface';
+import { orderService } from './order.service';
 
 export const createOrderController = async (req: Request, res: Response): Promise<any> => {
     try {
@@ -12,10 +12,10 @@ export const createOrderController = async (req: Request, res: Response): Promis
             });
         }
 
-        const order = await createOrder(email, productId, quantity);
+        const order = await orderService.createOrder(email, productId, quantity);
         res.status(201).json({
-            success: true,
             message: "Order created successfully",
+            success: true,
             data: order,
         });
 
@@ -24,5 +24,41 @@ export const createOrderController = async (req: Request, res: Response): Promis
             success: false,
             message: err.message || "Something went wrong",
         });
+    }
+}
+export const getAllOrder = async (req: Request, res: Response) => {
+    try {
+        const result = await orderService.getAllOrder();
+        res.status(200).json({
+            message: 'Revenue calculated successfully',
+            success: true,
+            data: result,
+          });
+        } 
+    catch (err: any) {
+        res.status(500).json({
+        message: err.message || 'something went wrong',
+        success: false,
+        error: err,
+        stack: err.stack || 'something went wrong',
+      });
+    }
+}
+export const getAllOrderRevenue = async (req: Request, res: Response) => {
+    try {
+        const result = await orderService.getAllOrderRevenueCalculate();
+        res.status(200).json({
+            message: 'Revenue calculated successfully',
+            success: true,
+            data: result,
+          });
+        } 
+    catch (err: any) {
+        res.status(500).json({
+        message: err.message || 'something went wrong',
+        success: false,
+        error: err,
+        stack: err.stack || 'something went wrong',
+      });
     }
 }
