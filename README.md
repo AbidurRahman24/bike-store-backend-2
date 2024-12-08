@@ -18,10 +18,6 @@ A Bike Store API developed using **Express** and **TypeScript**, with **MongoDB*
 - [API Endpoints](#api-endpoints)
   - [Product Endpoints](#product-endpoints)
   - [Order Endpoints](#order-endpoints)
-- [Examples](#examples)
-- [Troubleshooting](#troubleshooting)
-- [Contributors](#contributors)
-- [License](#license)
 
 ---
 
@@ -64,3 +60,4 @@ A Bike Store API developed using **Express** and **TypeScript**, with **MongoDB*
 - **MongoDB**: NoSQL database for scalable storage.
 - **Mongoose**: ODM for MongoDB with schema validation.
 - **Dotenv**: For environment variable management.
+# bike-store-backend
