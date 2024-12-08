@@ -3,7 +3,7 @@
 A Bike Store API developed using **Express** and **TypeScript**, with **MongoDB** integration via **Mongoose**. This API enables efficient management of bike products and customer orders, ensuring data integrity with robust schema validation.
 
 ---
-
+Live Deployment Link: https://bike-store-backend-ten.vercel.app/
 ## Table of Contents
 
 - [Features](#features)
@@ -18,10 +18,7 @@ A Bike Store API developed using **Express** and **TypeScript**, with **MongoDB*
 - [API Endpoints](#api-endpoints)
   - [Product Endpoints](#product-endpoints)
   - [Order Endpoints](#order-endpoints)
-- [Examples](#examples)
-- [Troubleshooting](#troubleshooting)
-- [Contributors](#contributors)
-- [License](#license)
+
 
 ---
 
